@@ -13,3 +13,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.min-h-100vh {
+  min-height: 100vh;
+}
+
+.header {
+  font-size: 25px;
+  top: 0;
+  position: sticky;
+  background-color: gray;
+  display: flex;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.space {
+  flex-grow: 1;
+}

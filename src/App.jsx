@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import Header from './Header';
+import Header from './pages/Header';
+import AppBar from './pages/AppBar';
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      <AppBar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
       </Routes>
@@ -13,8 +14,6 @@ function App() {
 }
 
 export default App;
-
-
 
 function Home() {  //基準となるHomeページ
   return (

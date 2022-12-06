@@ -1,7 +1,16 @@
 const Header = () => {
-    return(
+    return (
         <div className="min-h-100vh">
-            <div className="top-0 sticky"></div>
+            <div className="header">
+                <div>Home</div>
+                <div>goods</div>
+                <div>goods2</div>   
+                <div>goods3</div>
+                <div className="space"></div>
+                <div>Login</div>
+                <div>Account</div>
+                <div>Cart</div>
+            </div>
         </div>
     );
 }
