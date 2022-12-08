@@ -1,5 +1,6 @@
-// 商品のラインナップ（大きな区分け）
-import { Link } from 'react-router-dom';
+// 商品のラインナップ
+import React, { useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 
 const Captype = [
     { type: "数字キー", img: "number" },
@@ -29,6 +30,20 @@ export function CapsList(props) {
     return (  //上で作ったリストをreturnする
         <div>
             <div>{list}</div>
+        </div>
+    )
+}
+
+export function SubCapList(props) {
+    const params = useParams();
+    const img = params.img;
+
+    const [item, setItem] = useState(Captype[img]);
+
+    return (
+        <div>
+            {/* <p>{item.type}</p> */}
+            <h1>あいうえお</h1>
         </div>
     )
 }
