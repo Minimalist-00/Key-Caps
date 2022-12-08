@@ -1,8 +1,9 @@
-const Header = () => {
+//殆どのページに共通するヘッダー
+function Header() {
     return (
-        <div className="min-h-100vh">
+        <div className="min-h-5vh">
             <div className="header">
-                <div>Home</div>
+                <div>KeyCaps</div>
                 <div>goods</div>
                 <div>goods2</div>   
                 <div>goods3</div>

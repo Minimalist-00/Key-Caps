@@ -14,15 +14,15 @@ code {
     monospace;
 }
 
-.min-h-100vh {
-  min-height: 100vh;
+.min-h-5vh {
+  min-height: 5vh;
 }
 
 .header {
-  font-size: 25px;
   top: 0;
   position: sticky;
-  background-color: gray;
+  background-color: rgb(77, 77, 77);
+  color: white;
   display: flex;
   gap: 3rem;
   padding: 2rem;
@@ -34,4 +34,15 @@ code {
 
 .space {
   flex-grow: 1;
+}
+
+.slider{
+  text-align: center;
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+}
+
+.Lineupicon{
+  width: 20%;
 }
