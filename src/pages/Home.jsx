@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 
-function Body(props) {
+function Home(props) {
 
-  const list = Array.from(props.Captype.keys()).map(
+  const list = Array.from(props.CategorizedProducts.keys()).map(
     (s) => {
       return (
         <div>
-          <Link to={'/goodslist/' + s}>
+          <Link to={'/CategorizedProducts/' + s}>
             <img src={"images/GoodsList/" + s + ".jpg"} alt="s" className="Lineupicon" ></img>
           </Link>
-          <p>{props.Captype.get(s).type}</p>
+          <p>{props.CategorizedProducts.get(s).type}</p>
         </div>
       )
     }
@@ -34,4 +34,4 @@ function Body(props) {
 }
 
 
-export default Body;
+export default Home;
