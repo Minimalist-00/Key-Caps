@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './pages/Header';
 import Body from './pages/Body';
@@ -6,28 +6,28 @@ import GoodsList from './pages/GoodsList';
 
 function App() {    //関数宣言
 
-  const [Captype, SetCaptype] = useState([
-    { type: "数字キー", img: "number" },
-    { type: "アルファベットキー", img: "alphabet" },
-    { type: "ファンクションキー", img: "functionNum" },
-    { type: "テンキー", img: "numericKeypad" },
-    { type: "カーソルキー", img: "cursor" },
-    { type: "スペースキー", img: "space" },
-    { type: "その他のキー1", img: "other1" },
-    { type: "その他のキー2", img: "other2" }
-  ])
+  const Captype = new Map();
+  Captype.set("number", { type: "数字キー" })
+  Captype.set("aplhabet", { type: "アルファベットキー" })
+  Captype.set("functionNum", { type: "ファンクションキー" })
+  Captype.set("numericKeypad", { type: "テンキー" })
+  Captype.set("cursor", { type: "カーソルキー" })
+  Captype.set("space", { type: "スペースキー" })
+  Captype.set("other1", { type: "その他のキー1" })
+  Captype.set("other2", { type: "その他のキー2" })
+
 
   const [number, setNumber] = useState([
     { Capname: "1", price: 80 },
-    { Capname: "2" },
-    { Capname: "3" },
-    { Capname: "4" },
-    { Capname: "5" },
-    { Capname: "6" },
-    { Capname: "7" },
-    { Capname: "8" },
-    { Capname: "9" },
-    { Capname: "0" }
+    { Capname: "2", price: 80 },
+    { Capname: "3", price: 80 },
+    { Capname: "4", price: 80 },
+    { Capname: "5", price: 80 },
+    { Capname: "6", price: 80 },
+    { Capname: "7", price: 80 },
+    { Capname: "8", price: 80 },
+    { Capname: "9", price: 80 },
+    { Capname: "0", price: 80 }
   ])
 
   const [alphabet, setAlphabet] = useState([
@@ -102,7 +102,7 @@ function App() {    //関数宣言
       <Routes>
 
         <Route path="/" element={<Body Captype={Captype} />}></Route>
-        <Route path="/goodslist/:img" element={<GoodsList />}></Route>
+        <Route path="/goodslist/:img" element={<GoodsList Captype={Captype} />}></Route>
 
       </Routes>
 

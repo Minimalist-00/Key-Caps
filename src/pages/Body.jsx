@@ -6,14 +6,14 @@ import "react-alice-carousel/lib/alice-carousel.css";
 
 function Body(props) {
 
-  const list = props.Captype.map(
+  const list = Array.from(props.Captype.keys()).map(
     (s) => {
       return (
         <div>
-          <Link to={'/goodslist/' + s.img}>
-            <img src={"images/GoodsList/" + s.img + ".jpg"} alt="s.img" className="Lineupicon" ></img>
+          <Link to={'/goodslist/' + s}>
+            <img src={"images/GoodsList/" + s + ".jpg"} alt="s" className="Lineupicon" ></img>
           </Link>
-          <p>{s.type}</p>
+          <p>{props.Captype.get(s).type}</p>
         </div>
       )
     }
