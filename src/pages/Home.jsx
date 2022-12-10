@@ -8,9 +8,9 @@ function Home(props) {
   const list = props.categorizedProducts.map(
     (s, index) => {  //ラムダ式（アロー関数）sは引数（引数が1つの場合、()を省略可能）
       return (
-        <div>
+        <div key={index}>
           <Link to={'/categorizedProducts/' + index} preventScrollReset={false}>
-            <img src={"images/categorizedProducts/" + s.img + ".jpg"} alt="s.img" className="Lineupicon" ></img>
+            <img src={"images/categorizedProducts/" + s.img + ".jpg"} alt="s.img" className="Lineupicon" />
           </Link>
           <p>{s.categoryName}</p>
         </div>
@@ -20,7 +20,7 @@ function Home(props) {
 
   return (
     <div>
-      <AliceCarousel autoPlay autoPlayInterval="100000">
+      <AliceCarousel autoPlay autoPlayInterval="5000" infinite keyboardNavigation>
         <img src={"images/Home0.jpg"} className="slider" alt="Home0.jpg" />
         <img src={"images/Home1.jpg"} className="slider" alt="Home1.jpg" />
         <img src={"images/Home2.jpg"} className="slider" alt="Home2.jpg" />

@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import CategorizedProductList from './pages/CategorizedProductList';
 import ProductsDetail from './pages/ProductsDetail';
 import { categorizedProducts } from './pages/ProductsData';
+import ThanksPurchase from "./pages/ThanksPurchase";
 
 function App() {    //関数宣言
 
@@ -12,15 +13,14 @@ function App() {    //関数宣言
 
   return (
     <BrowserRouter>
-      <Header />
 
       <Routes>
-
-        <Route path="/" element={<Home categorizedProducts={Category} />}></Route>
-        <Route path="/categorizedProducts/:categoryId" element={<CategorizedProductList categorizedProducts={Category} />}></Route>
-
-        <Route path="/ProductsDetail/:category/:capname" element={<ProductsDetail categorizedProducts={Category} />}></Route>
-
+        <Route path="/" element={<Header />}>
+          <Route path="/" element={<Home categorizedProducts={Category} />}></Route>
+          <Route path="/categorizedProducts/:categoryId" element={<CategorizedProductList categorizedProducts={Category} />}></Route>
+          <Route path="/ProductsDetail/:categoryId/:productsId" element={<ProductsDetail categorizedProducts={Category} />}></Route>
+          <Route path="/thanksPurchase" element={<ThanksPurchase categorizedProducts={Category} />}></Route>
+        </Route>
       </Routes>
 
     </BrowserRouter>

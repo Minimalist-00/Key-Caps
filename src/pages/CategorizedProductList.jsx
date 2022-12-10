@@ -11,9 +11,9 @@ function CategorizedProductList(props) {
   const productsList = item.products.map(
     (product, index) => {
       return (
-        <div>
+        <div key={index}>
           <Link to={'/ProductsDetail/' + categoryId + "/" + index}>
-            <img src={"/images/products/" + product.capname + ".jpg"} alt="product.capname" className="products"></img>
+            <img src={"/images/products/" + product.capname + "_0.jpg"} alt="product.capname" className="products"></img>
           </Link>
           <p>{product.capname}</p>
         </div>
