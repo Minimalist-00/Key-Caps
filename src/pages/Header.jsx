@@ -9,7 +9,7 @@ function Header() {
                 <div>goods2</div>
                 <div>goods3</div>
                 <div className="space"></div>
-                <div>授業で制作したテストサイトです</div>
+                <div>授業の課題で制作したテストサイトです</div>
                 <div className="space"></div>
                 <div>Login</div>
                 <div>Account</div>

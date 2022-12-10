@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './pages/Header';
 import Home from './pages/Home';
+import Footer from './pages/Footer';
 import CategorizedProductList from './pages/CategorizedProductList';
 import ProductsDetail from './pages/ProductsDetail';
 import { categorizedProducts } from './pages/ProductsData';
