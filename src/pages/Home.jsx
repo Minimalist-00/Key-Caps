@@ -1,4 +1,3 @@
-// ホームのBodyに当たる部分
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AliceCarousel from 'react-alice-carousel';
@@ -6,14 +5,14 @@ import "react-alice-carousel/lib/alice-carousel.css";
 
 function Home(props) {
 
-  const list = Array.from(props.CategorizedProducts.keys()).map(
-    (s) => {
+  const list = props.categorizedProducts.map(
+    (s, index) => {  //ラムダ式（アロー関数）sは引数（引数が1つの場合、()を省略可能）
       return (
         <div>
-          <Link to={'/CategorizedProducts/' + s}>
-            <img src={"images/GoodsList/" + s + ".jpg"} alt="s" className="Lineupicon" ></img>
+          <Link to={'/categorizedProducts/' + index} preventScrollReset={false}>
+            <img src={"images/categorizedProducts/" + s.img + ".jpg"} alt="s.img" className="Lineupicon" ></img>
           </Link>
-          <p>{props.CategorizedProducts.get(s).type}</p>
+          <p>{s.categoryName}</p>
         </div>
       )
     }

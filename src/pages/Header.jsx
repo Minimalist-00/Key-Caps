@@ -8,6 +8,8 @@ function Header() {
                 <div>goods2</div>   
                 <div>goods3</div>
                 <div className="space"></div>
+                <h3>授業で制作したテストサイトです</h3>
+                <div className="space"></div>
                 <div>Login</div>
                 <div>Account</div>
                 <div>Cart</div>
