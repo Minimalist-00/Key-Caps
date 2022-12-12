@@ -2,17 +2,13 @@ import { Link,Outlet } from "react-router-dom";
 
 function Header() {
     return (
-        <div className="min-h-5vh">
+        <div>
             <div className="header">
                 <Link to={'/'} className="clear_Link_css" >KeyCaps</Link>
                 <div>Category</div>
-                <div className="space"></div>
-                <div>
-                    <a name="top">授業の課題で制作したテストサイトです</a>
-                </div>
-                <div className="space"></div>
-                <Link to={'/Login'} className="clear_Link_css" >Login</Link>
-                <Link to={'/Cart'} className="clear_Link_css" >Cart</Link>
+                <div className="space" />
+                <div><Link to={'/Login'} className="clear_Link_css" >Login</Link></div>
+                <div><Link to={'/Cart'} className="clear_Link_css" >Cart</Link></div>
                 <div>Search</div>
             </div>
             <Outlet />

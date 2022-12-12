@@ -20,8 +20,9 @@ code {
 
 .header {
   top: 0;
-  position: sticky;
-  background-color: rgb(77, 77, 77);
+  position: fixed;
+  width: 100%;
+  background-color: #555555;
   color: white;
   display: flex;
   gap: 3rem;
@@ -29,14 +30,8 @@ code {
   z-index: 1;
 }
 
-.footer{
-  position: absolute; /*絶対位置*/
-  background-color: rgb(77, 77, 77);
-  color: white;
-  display: flex;
-  gap: 3rem;
-  padding: 1.2rem;
-  z-index: 1;
+.home{
+  background-color: white	;
 }
 
 .padding-2rem {
@@ -76,4 +71,81 @@ code {
 
 .go-back-page:hover {
   text-decoration: none;
+}
+
+.footer06 {
+  color: #777777;
+  background: #DDDDDD;
+  padding: 30px;
+}
+
+.footer06 a {
+  color: #777777;
+  text-decoration: none;
+}
+
+.footer06 li a:hover {
+  color: #777777;
+  text-decoration: underline;
+}
+
+.footer06 .wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.footer06 .wrap h5 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  border-bottom: 1px #c4c4c4 solid;
+}
+
+.footer06 .wrap p {
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+.footer06 .wrap .box {
+  width: 30%;
+}
+
+.footer06 .wrap .box ul {
+  margin: 0;
+  padding: 0 0 20px 0;
+  list-style: none;
+}
+
+.footer06 .wrap .copyright {
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+
+@media only screen and (max-width: 599px) {
+  /* スマートフォンの場合 */
+  .footer06 .wrap {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .footer06 .wrap h3 {
+    border: none;
+  }
+
+  .footer06 .wrap .box {
+    width: 100%;
+  }
+
+  .footer06 .wrap .box ul {
+    border-top: 1px #c4c4c4 solid;
+  }
+
+  .footer06 .wrap .box ul li a {
+    display: block;
+    padding: 5px 15px;
+    border-bottom: 1px #c4c4c4 solid;
+  }
 }

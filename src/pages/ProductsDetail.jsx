@@ -20,7 +20,7 @@ function ProductsDetail(props) {
 
     if (amount == 0) {
         submitButton = <button type="button" class="btn btn-outline-dark">購入する</button>;
-        
+
         //アラートの表示をさせたい
     }
 
@@ -35,7 +35,7 @@ function ProductsDetail(props) {
                             </Link>
                         </li>
                         <li class="breadcrumb-item">
-                            <Link to={'/categorizedProducts/' + productsId} className="go-back-page">
+                            <Link to={'/categorizedProducts/' + categoryId} className="go-back-page">
                                 {products.categoryName}
                             </Link>
                         </li>
@@ -45,14 +45,20 @@ function ProductsDetail(props) {
             </div>
             <div className="d-flex justify-content-start">
                 <div>
-                    <img onClick={_ => setImage(0)} src={"/images/products/" + productsId + "_0.jpg"} alt="productsId" className="products d-block" />
-                    <img onClick={_ => setImage(1)} src={"/images/products/" + productsId + "_1.jpg"} alt="productsId" className="products d-block" />
-                    <img onClick={_ => setImage(2)} src={"/images/products/" + productsId + "_2.jpg"} alt="productsId" className="products d-block" />
+                    <img onClick={_ => setImage(0)} src={"/images/products/" + products.img + "/" + product.capname + "_0.jpg"} alt="productsId" className="products d-block" />
+                    <img onClick={_ => setImage(1)} src={"/images/products/" + products.img + "/" + product.capname + "_1.jpg"} alt="productsId" className="products d-block" />
+                    <img onClick={_ => setImage(2)} src={"/images/products/" + products.img + "/" + product.capname + "_2.jpg"} alt="productsId" className="products d-block" />
                 </div>
-                <img src={"/images/products/" + productsId + "_" + image + ".jpg"} alt="productsId" className="products" />
+                <img src={"/images/products/" + products.img + "/" + product.capname + "_" + image + ".jpg"} alt="productsId" className="products" />
             </div>
             <h2>キーキャップ 「{product.capname}」</h2>
             <p>「{product.capname}」が印字されたキーキャップです。</p>
+
+            <ul>
+                <li>ダブルショット(2色成型)のキーキャップです</li>
+                <li>文字部分はバックライトを透過します</li>
+                <li>81/87/104キー標準キーボードに適しています</li>
+            </ul>
             <p>価格：¥{product.price}</p>
 
             <select value={amount} onChange={e => setAmount(e.currentTarget.value)} class="custom-select">
@@ -67,19 +73,9 @@ function ProductsDetail(props) {
             <p></p>
             <div>合計金額：¥{amount * product.price}</div>
             <p></p>
-
-            {/*  */}
-
             {submitButton}
         </div>
     );
 }
 
 export default ProductsDetail;
-
-
-<img>
-    <div className="">
-
-    </div>
-</img>

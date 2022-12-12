@@ -103,7 +103,7 @@ export const categorizedProducts =
       categoryName: "その他のキー1",
       img: "other1",
       products: [
-        { capname: "space", price: 250 },
+        { capname: "Space", price: 250 },
         { capname: "minus", price: 80 },
         { capname: "Equal", price: 80 },
         { capname: "leftsquare", price: 80 },

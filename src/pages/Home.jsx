@@ -20,12 +20,14 @@ function Home(props) {
 
   return (
     <div>
-      <div>
+      <div className="home">
         <AliceCarousel autoPlay autoPlayInterval="5000" autoPlayStrategy='all' infinite keyboardNavigation >
-          <img src={"images/Home0.jpg"} className="slider" alt="Home0.jpg" />
-          <img src={"images/Home1.jpg"} className="slider" alt="Home1.jpg" />
-          <img src={"images/Home2.jpg"} className="slider" alt="Home2.jpg" />
-          <img src={"images/Home3.jpg"} className="slider" alt="Home3.jpg" />
+          <img src={"images/Home/Home1.jpg"} className="slider" alt="Home0.jpg" />
+          <img src={"images/Home/Home2.jpg"} className="slider" alt="Home2.jpg" />
+          <img src={"images/Home/Home3.jpg"} className="slider" alt="Home3.jpg" />
+          <img src={"images/Home/Home4.jpg"} className="slider" alt="Home1.jpg" />
+          <img src={"images/Home/Home5.jpg"} className="slider" alt="Home1.jpg" />
+          <img src={"images/Home/Home6.jpg"} className="slider" alt="Home1.jpg" />
         </AliceCarousel>
         <h2>LINE UP</h2>
         <div>{list}</div>
