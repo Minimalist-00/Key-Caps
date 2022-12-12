@@ -23,6 +23,16 @@ function CategorizedProductList(props) {
 
   return (
     <div>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <Link to={'/'} className="go-back-page" >
+              トップページ
+            </Link>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">{item.categoryName}</li>
+        </ol>
+      </nav>
       <h2>{item.categoryName} キーキャップ一覧</h2>
       <div>{productsList}</div>
     </div>

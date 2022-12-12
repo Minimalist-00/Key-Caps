@@ -15,15 +15,35 @@ function ProductsDetail(props) {
 
     const [image, setImage] = useState(0);
 
+
     let submitButton = <Link to={'/thanksPurchase'} type="button" class="btn btn-outline-dark">購入する</Link>; //
 
-    if(amount == 0){
+    if (amount == 0) {
         submitButton = <button type="button" class="btn btn-outline-dark">購入する</button>;
+        
+        //アラートの表示をさせたい
     }
 
     return (
         <div>
-            <div  className="d-flex justify-content-start">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <Link to={'/'} className="go-back-page" >
+                                トップページ
+                            </Link>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <Link to={'/categorizedProducts/' + productsId} className="go-back-page">
+                                {products.categoryName}
+                            </Link>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">キーキャップ 「{product.capname}」</li>
+                    </ol>
+                </nav>
+            </div>
+            <div className="d-flex justify-content-start">
                 <div>
                     <img onClick={_ => setImage(0)} src={"/images/products/" + productsId + "_0.jpg"} alt="productsId" className="products d-block" />
                     <img onClick={_ => setImage(1)} src={"/images/products/" + productsId + "_1.jpg"} alt="productsId" className="products d-block" />
@@ -31,8 +51,6 @@ function ProductsDetail(props) {
                 </div>
                 <img src={"/images/products/" + productsId + "_" + image + ".jpg"} alt="productsId" className="products" />
             </div>
-            <p>{products.categoryName}</p>
-            <p>{product.categoryId}</p>
             <h2>キーキャップ 「{product.capname}」</h2>
             <p>「{product.capname}」が印字されたキーキャップです。</p>
             <p>価格：¥{product.price}</p>
@@ -49,7 +67,7 @@ function ProductsDetail(props) {
             <p></p>
             <div>合計金額：¥{amount * product.price}</div>
             <p></p>
-            
+
             {/*  */}
 
             {submitButton}

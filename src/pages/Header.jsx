@@ -1,21 +1,22 @@
-import { Outlet } from "react-router-dom";
+import { Link,Outlet } from "react-router-dom";
 
 function Header() {
     return (
         <div className="min-h-5vh">
             <div className="header">
-                <div>KeyCaps</div>
-                <div>goods</div>
-                <div>goods2</div>
-                <div>goods3</div>
+                <Link to={'/'} className="clear_Link_css" >KeyCaps</Link>
+                <div>Category</div>
                 <div className="space"></div>
-                <div>授業の課題で制作したテストサイトです</div>
+                <div>
+                    <a name="top">授業の課題で制作したテストサイトです</a>
+                </div>
                 <div className="space"></div>
-                <div>Login</div>
-                <div>Account</div>
-                <div>Cart</div>
+                <Link to={'/Login'} className="clear_Link_css" >Login</Link>
+                <Link to={'/Cart'} className="clear_Link_css" >Cart</Link>
+                <div>Search</div>
             </div>
             <Outlet />
+            {/* ここにルーター内のリンクに対応した各ページを表示させる */}
         </div>
     );
 }
