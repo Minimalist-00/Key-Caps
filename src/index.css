@@ -2,75 +2,164 @@
 
 body {
   margin: 0;
-   padding: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  animation: bgChange 8s ease infinite;
+  /* 任意の時間を設定 */
 }
+
+.fadein-home{
+  /* フェードイン･アウトのアニメーションを追加 */
+  animation: fadein-anim 4s forwards ease-out;
+}
+
+.fadein-products{
+  animation: fadein-anim 5s forwards;
+}
+
+
+body p {
+  margin: 0;
+  padding: 0;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-.min-h-5vh {
-  min-height: 5vh;
-}
-
-.header {
+/* ヘッダーに関わるcss */
+header {
   top: 0;
+  height: 8vh;
   position: sticky;
-  background-color: #555555;
-  color: white;
+  background-color: #555;
   display: flex;
   gap: 3rem;
-  padding: 1.2rem;
+  padding: 10px 4% 10px;
+  align-items: center;
+  z-index: 1;
 }
 
-.home{
-  background-color: white	;
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 21px;
+  text-decoration: none;
+  /* transition: all .3s; */
 }
 
-.padding-2rem {
-  padding: 2rem;
+header p {
+  margin: 0 0 0 15px;
+  font-size: 18px;
+}
+
+.link-white {
+  text-decoration: none;
+  color: white;
+}
+
+.link-white:hover {
+  text-decoration: underline;
+  color: white;
+  text-transform: uppercase;
 }
 
 .space {
   flex-grow: 1;
 }
 
-.slider {
+/* PAGE TOP のcss */
+
+#page-top a {
+  background: #666;
+  color: #fff;
   text-align: center;
-  width: 100%;
-  height: 800px;
-  object-fit: cover;
-}
-
-.Lineupicon {
-  width: 20%;
-}
-
-.products {
-  width: 20%;
-}
-
-.clear_Link_css {
+  display: block;
   text-decoration: none;
-  color: white;
-
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  transition: all 0.3s;
 }
 
-.clear_Link_css:hover {
-  text-decoration: underline;
-  color: white;
+#page-top a:hover {
+  background: #888;
 }
+
+.img-hidden {
+  height: 300px;
+  overflow: hidden;
+}
+
+
+
+/* Homeに関わるcss */
+
+.box1 {
+  width: 40%;
+  padding: 0.5em 1em;
+  margin: 0.8em auto 2.3em auto;
+  border: solid 1.5px #444;
+  background: rgba(194, 194, 194, 0.3);
+}
+
+.box1 p {
+  margin: 0;
+  padding: 0;
+}
+
+.sample_box11 {
+  width: 300px;
+  padding: 15px;
+  margin: 2em auto;
+  background: #ADD8E6;
+  /* 紙の色 */
+  color: #000;
+  /* 文字の色 */
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.03);
+  transform: rotate(2deg);
+  word-break: break-all;
+}
+
+.sample_box11 p {
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  font-family: 'Comic Sans MS', 'Hannotate SC';
+}
+
+.sample_box11_tape {
+  width: 50%;
+  height: 35px;
+  margin: -30px auto 0;
+  background: #989898;
+  transform: rotate(-3deg);
+  opacity: 0.1;
+}
+
+.sample_box11_title {
+  text-align: center;
+  font-size: 1.8em !important;
+  margin-top: 10px !important;
+}
+
+
+/* CategorizedProductListに関わるcss */
 
 
 .go-back-page:hover {
   text-decoration: none;
 }
+
+/* Footerに関わるcss */
 
 .footer06 {
   color: #777777;
@@ -123,6 +212,7 @@ code {
 }
 
 @media only screen and (max-width: 599px) {
+
   /* スマートフォンの場合 */
   .footer06 .wrap {
     width: 100%;
@@ -147,4 +237,41 @@ code {
     padding: 5px 15px;
     border-bottom: 1px #c4c4c4 solid;
   }
+}
+
+
+
+
+@keyframes fadein-anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout-anim {
+  0% {
+    opacity: 1;
+  }
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes bgChange {
+  0% {
+    background: #FFF;
+  }
+
+  50% {
+    background: #EFF;
+  }
+
+  100% {
+    background: #FFF;
+  }
+
+  /* 白色 → 薄い水色 → 白色 */
 }
