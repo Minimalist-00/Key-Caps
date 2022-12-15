@@ -2,6 +2,12 @@ import React from 'react';
 import { Link, Outlet } from "react-router-dom";
 import Footer from '../pages/Footer';
 
+import LoginIcon from '@mui/icons-material/Login';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import SearchIcon from '@mui/icons-material/Search';
+
+
+
 const returnTop = () => {
     window.scrollTo({
         top: 0,
@@ -17,9 +23,9 @@ function Header() {
                     <Link to={'/'} onClick={returnTop} className="link-white">KeyCaps</Link>
                 </h1>
                 <div className="space" />
-                <p><Link to={'/Login'} className="link-white" style={{cursor:'not-allowed'}} >Login</Link></p>
-                <p><Link to={'/Cart'} className="link-white" style={{cursor:'not-allowed'}} >Cart</Link></p>
-                <p className="link-white" style={{cursor:'not-allowed'}}>Search</p>
+                <Link to={'/Cart'}><ShoppingCartOutlinedIcon style={{ color: 'white' }} /></Link>
+                <Link to={'/SignIn'}><LoginIcon style={{ color: 'white' }} /></Link>
+                <SearchIcon className="searchIcon" />
             </header>
             <body>
                 <Outlet />

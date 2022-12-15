@@ -9,8 +9,26 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   animation: bgChange 8s ease infinite;
-  /* 任意の時間を設定 */
+  /* 背景色の自動変化 */
 }
+
+body p {
+  margin: 0;
+  padding: 0;
+}
+
+body a {
+  /* text-decoration: none; */
+  color: #000;
+}
+
+body a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+
+
 
 .fadein-home {
   /* フェードイン･アウトのアニメーションを追加 */
@@ -21,13 +39,6 @@ body {
   animation: fadein-anim 5s forwards;
 }
 
-
-body p {
-  margin: 0;
-  padding: 0;
-}
-
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -36,14 +47,16 @@ code {
 /* ヘッダーに関わるcss */
 header {
   top: 0;
-  height: 8vh;
   position: sticky;
+  /* body要素に重ならないようにしている */
+  height: 8vh;
+  gap: 3rem;
+  padding: 10px 3% 10px;
   background-color: #555;
   display: flex;
-  gap: 3rem;
-  padding: 10px 4% 10px;
   align-items: center;
   z-index: 1;
+  /* body要素の上に来るように */
 }
 
 header h1 {
@@ -53,9 +66,17 @@ header h1 {
   text-decoration: none;
 }
 
-header p {
-  margin: 0 0 0 15px;
-  font-size: 18px;
+.space {
+  flex-grow: 1;
+}
+
+.icon :hover {
+  color: #000;
+}
+
+.searchIcon {
+  color: white;
+  cursor: not-allowed;
 }
 
 .link-white {
@@ -67,10 +88,6 @@ header p {
   text-decoration: underline;
   color: white;
   text-transform: uppercase;
-}
-
-.space {
-  flex-grow: 1;
 }
 
 /* PAGE TOP のcss */
@@ -261,11 +278,17 @@ header p {
 
 
 /* ThanksPurchaseに関わるcss */
-.Thanks{
+.Thanks {
   text-align: center;
   margin-top: 20%;
   margin-bottom: 25%;
 }
+
+/* Loginページに関わるcss */
+.bigSpace{
+  margin-bottom: 50%;
+}
+
 
 
 
@@ -286,14 +309,9 @@ header p {
     width: 100%;
   }
 
-  .footer06 .wrap .box ul {
-    border-top: 1px #c4c4c4 solid;
-  }
-
   .footer06 .wrap .box ul li a {
     display: block;
     padding: 5px 15px;
-    border-bottom: 1px #c4c4c4 solid;
   }
 }
 

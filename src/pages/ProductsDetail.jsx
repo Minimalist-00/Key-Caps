@@ -23,7 +23,7 @@ function ProductsDetail(props) {
     let submitButton = <Link to={'/thanksPurchase'} type="button" class="btn btn-secondary">購入する</Link>;
 
 
-    if (amount == 0) {
+    if (amount === 0) {
         submitButton = <button type="button" class="btn btn-secondary" onClick={() => alert("個数を選択してください！")} style={{ cursor: 'help' }}>購入する</button>
     }
 
@@ -96,7 +96,7 @@ function ProductsDetail(props) {
                                         <option value={4}>4</option>
                                         <option value={5}>5</option>
                                     </select>
-                                    <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />}/>
+                                    <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
                                 </div>
                                 <div class="col-md-5">
                                     <div class="pb-3">合計金額：¥{amount * product.price} (tax in)</div>

@@ -9,7 +9,7 @@ function Cart() {
             <Box sx={{ width: '100%' }}>
       <LinearProgress />
     </Box>
-            <div>カートページ</div>
+            <div className="bigSpace"></div>
         </div>
     );
 }

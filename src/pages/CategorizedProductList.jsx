@@ -45,7 +45,7 @@ function CategorizedProductList(props) {
         </nav>
         <div class="container" >
         <h2 >{item.categoryName} キーキャップ一覧</h2>
-          <div class="row row-cols-4">
+          <div class="row row-cols-4 bg-white border pt-4 px-3">
             {productsList}
           </div>
         </div>

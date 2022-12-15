@@ -1,4 +1,4 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 
@@ -42,7 +42,7 @@ function Home(props) {
         <div className="category-box-tape" />
         <p className="category-box-title">Caps Category</p>
       </div>
-      <div class="container" >
+      <div class="container bg-white border pt-4" >
         <div class="row row-cols-3">
           {list}
         </div>

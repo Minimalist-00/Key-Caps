@@ -1,6 +1,13 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+
+
+
 function Footer() {
     return (
         <div>
@@ -21,12 +28,12 @@ function Footer() {
                     </div>
                     <div class="box">
                         <h5>Follow us</h5>
-                        <ul>
-                            <li><Link to={'*'} >Facebook</Link></li>
-                            <li><Link to={'*'} >Instagram</Link></li>
-                            <li><Link to={'*'} >Twitter</Link></li>
-                            <li><Link to={'*'} >Discord</Link></li>
-                            <li><Link to={'*'} >YouTube</Link></li>
+                        <ul class="d-flex">
+                            <li class="pe-2 ps-1"><Link to={'/Facebook'} ><FacebookIcon/></Link></li>
+                            <li class="pe-2"><Link to={'/Twitter'} ><TwitterIcon/></Link></li>
+                            <li class="pe-2"><Link to={'/Line'} ><InstagramIcon/></Link></li>
+                            <li class="pe-2"><Link to={'/Youtube'} ><YouTubeIcon/></Link></li>
+                            
                         </ul>
                     </div>
                     <p class="copyright">
