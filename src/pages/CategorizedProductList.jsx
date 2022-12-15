@@ -15,7 +15,9 @@ function CategorizedProductList(props) {
           <Link to={'/ProductsDetail/' + categoryId + "/" + index}>
             <img src={"/images/products/" + item.img + "/" + product.capname + "_0.jpg"} alt="product.capname" class="col-md-12" />
           </Link>
-          <p>{product.capname}キー</p>
+          <div className="product-box">
+          <p class="text-center">{product.capname}キー</p>
+          </div>
         </div>
       )
     }
@@ -41,10 +43,8 @@ function CategorizedProductList(props) {
             <li class="breadcrumb-item active" aria-current="page">{item.categoryName}</li>
           </ol>
         </nav>
-        <div>
-        <h1>{item.categoryName} キーキャップ一覧</h1>
-        </div>
         <div class="container" >
+        <h2 >{item.categoryName} キーキャップ一覧</h2>
           <div class="row row-cols-4">
             {productsList}
           </div>

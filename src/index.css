@@ -12,12 +12,12 @@ body {
   /* 任意の時間を設定 */
 }
 
-.fadein-home{
+.fadein-home {
   /* フェードイン･アウトのアニメーションを追加 */
   animation: fadein-anim 4s forwards ease-out;
 }
 
-.fadein-products{
+.fadein-products {
   animation: fadein-anim 5s forwards;
 }
 
@@ -51,7 +51,6 @@ header h1 {
   padding: 0;
   font-size: 21px;
   text-decoration: none;
-  /* transition: all .3s; */
 }
 
 header p {
@@ -102,20 +101,33 @@ header p {
 
 /* Homeに関わるcss */
 
-.box1 {
+.products-box {
   width: 40%;
-  padding: 0.5em 1em;
-  margin: 0.8em auto 2.3em auto;
+  padding: .5em 1em;
+  margin: .8em auto 2.3em auto;
   border: solid 1.5px #444;
-  background: rgba(194, 194, 194, 0.3);
+  background: rgba(206, 206, 206, 0.3);
 }
 
-.box1 p {
+.products-box p {
   margin: 0;
   padding: 0;
 }
 
-.sample_box11 {
+.product-box {
+  width: 50%;
+  padding: .4em 0em;
+  margin: .8em auto 2.1em auto;
+  border: solid 1.5px #444;
+  background: rgba(206, 206, 206, 0.3);
+}
+
+.product-box p {
+  margin: 0;
+  padding: 0;
+}
+
+.category-box {
   width: 300px;
   padding: 15px;
   margin: 2em auto;
@@ -128,7 +140,7 @@ header p {
   word-break: break-all;
 }
 
-.sample_box11 p {
+.category-box p {
   margin: 0;
   padding: 0;
   padding-top: 25px;
@@ -136,7 +148,7 @@ header p {
   font-family: 'Comic Sans MS', 'Hannotate SC';
 }
 
-.sample_box11_tape {
+.category-box-tape {
   width: 50%;
   height: 35px;
   margin: -30px auto 0;
@@ -145,7 +157,7 @@ header p {
   opacity: 0.1;
 }
 
-.sample_box11_title {
+.category-box-title {
   text-align: center;
   font-size: 1.8em !important;
   margin-top: 10px !important;
@@ -154,9 +166,45 @@ header p {
 
 /* CategorizedProductListに関わるcss */
 
-
 .go-back-page:hover {
   text-decoration: none;
+}
+
+.detail li {
+  list-style-type: square;
+}
+
+.detail ul {
+  padding-left: 1.5em;
+}
+
+.detail-box {
+  width: 80%;
+  padding: 1em 1.5em;
+  margin: 1em 0px;
+  background-color: #EEE;
+  /*背景色*/
+  border: 1px solid #999;
+  /*線*/
+  border-radius: 10px;
+  /*角の丸み*/
+}
+
+.detail-box p {
+  font-weight: 400;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 4px;
+}
+
+.select-amount {
+  cursor: pointer;
+  height: 50%;
+}
+
+.select-amount:hover {
+  background-color: #EEE;
 }
 
 /* Footerに関わるcss */
@@ -211,9 +259,19 @@ header p {
   padding: 20px 0 0 0;
 }
 
+
+/* ThanksPurchaseに関わるcss */
+.Thanks{
+  text-align: center;
+  margin-top: 20%;
+  margin-bottom: 25%;
+}
+
+
+
+/* スマートフォンの場合 */
 @media only screen and (max-width: 599px) {
 
-  /* スマートフォンの場合 */
   .footer06 .wrap {
     width: 100%;
     padding: 0 20px;
@@ -240,12 +298,11 @@ header p {
 }
 
 
-
-
 @keyframes fadein-anim {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -255,9 +312,10 @@ header p {
   0% {
     opacity: 1;
   }
-	100% {
-		opacity: 0;
-	}
+
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes bgChange {

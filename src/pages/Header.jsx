@@ -16,11 +16,10 @@ function Header() {
                 <h1>
                     <Link to={'/'} onClick={returnTop} className="link-white">KeyCaps</Link>
                 </h1>
-                <p className="link-white">Category</p>
                 <div className="space" />
-                <p><Link to={'/Login'} className="link-white" >Login</Link></p>
-                <p><Link to={'/Cart'} className="link-white" >Cart</Link></p>
-                <p><Link to={'/Search'} className="link-white" >Search</Link></p>
+                <p><Link to={'/Login'} className="link-white" style={{cursor:'not-allowed'}} >Login</Link></p>
+                <p><Link to={'/Cart'} className="link-white" style={{cursor:'not-allowed'}} >Cart</Link></p>
+                <p className="link-white" style={{cursor:'not-allowed'}}>Search</p>
             </header>
             <body>
                 <Outlet />

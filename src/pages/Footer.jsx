@@ -9,25 +9,24 @@ function Footer() {
                     <div class="box">
                         <h5>About KeyCaps</h5>
                         <ul>
-                            <li><Link to={'/'} >KeyCapsとは</Link></li>
+                            <li><Link to={'/AboutKeyCaps'} >KeyCapsとは</Link></li>
                             <li><Link to={'/'} >プロジェクト案</Link></li>
                         </ul>
                     </div>
                     <div class="box">
                         <h5>Various</h5>
                         <ul>
-                            <li><Link to={'/'} >ちょこっとレビュー</Link></li>
-                            <li><Link to={'/'} >XXXXXXX</Link></li>
+                            <li><Link to={'/Review'} >ちょこっとレビュー</Link></li>
                         </ul>
                     </div>
                     <div class="box">
                         <h5>Follow us</h5>
                         <ul>
-                            <li><Link to={'/'} >Facebook</Link></li>
-                            <li><Link to={'/'} >Instagram</Link></li>
-                            <li><Link to={'/'} >Twitter</Link></li>
-                            <li><Link to={'/'} >Discord</Link></li>
-                            <li><Link to={'/'} >YouTube</Link></li>
+                            <li><Link to={'*'} >Facebook</Link></li>
+                            <li><Link to={'*'} >Instagram</Link></li>
+                            <li><Link to={'*'} >Twitter</Link></li>
+                            <li><Link to={'*'} >Discord</Link></li>
+                            <li><Link to={'*'} >YouTube</Link></li>
                         </ul>
                     </div>
                     <p class="copyright">
