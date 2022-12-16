@@ -22,7 +22,7 @@ function Review() {
     }
 
     const list = textList.map(
-        (text, i) => <p>{i} : {text}</p>
+        (text, i) => <p>{i+1} : {text}</p>
     );
 
     return (

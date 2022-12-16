@@ -4,8 +4,6 @@ import "react-alice-carousel/lib/alice-carousel.css";
 
 function Home(props) {
 
-
-
   const list = props.categorizedProducts.map(
     (s, index) => {  //ラムダ式（アロー関数）sは引数（引数が1つの場合、()を省略可能）
       return (

@@ -7,10 +7,11 @@ import ProductsDetail from './pages/ProductsDetail';
 import { categorizedProducts } from './pages/ProductsData';
 import ThanksPurchase from "./pages/ThanksPurchase";
 import NoMatch from './pages/NoMatch';
+import SignIn from "./pages/SignIn"
 import Cart from "./pages/Cart";
 import AboutKeyCaps from "./pages/AboutKeyCaps";
 import Review from "./pages/Review";
-import SignIn from "./pages/SignIn"
+import DesignProposal from "./pages/DesignProposal"
 
 export function ScrollTop() {  //画面遷移時 スクロール位置をページ最上部に固定
   const { pathname } = useLocation();
@@ -40,6 +41,7 @@ export default function App() {    //関数宣言
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/AboutKeyCaps" element={<AboutKeyCaps />} />
           <Route path="/Review" element={<Review />} />
+          <Route path="/DesignProposal" element={<DesignProposal />} />
         </Route>
         <Route path="*" element={<NoMatch />} />
       </Routes>

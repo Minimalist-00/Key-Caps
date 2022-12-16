@@ -17,7 +17,7 @@ function Footer() {
                         <h5>About KeyCaps</h5>
                         <ul>
                             <li><Link to={'/AboutKeyCaps'} >KeyCapsとは</Link></li>
-                            <li><Link to={'/'} >プロジェクト案</Link></li>
+                            <li><Link to={'/DesignProposal'} >プロジェクト案</Link></li>
                         </ul>
                     </div>
                     <div class="box">
@@ -33,7 +33,6 @@ function Footer() {
                             <li class="pe-2"><Link to={'/Twitter'} ><TwitterIcon/></Link></li>
                             <li class="pe-2"><Link to={'/Line'} ><InstagramIcon/></Link></li>
                             <li class="pe-2"><Link to={'/Youtube'} ><YouTubeIcon/></Link></li>
-                            
                         </ul>
                     </div>
                     <p class="copyright">

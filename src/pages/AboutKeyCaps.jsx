@@ -1,33 +1,37 @@
-import Box from '@mui/material/Box';
-import LinearProgress from '@mui/material/LinearProgress';
 
 
 function AboutKeyCaps() {
     return (
-        <div>
-            {/* <Box sx={{ width: '100%' }}>
-                <LinearProgress />
-            </Box> */}
+            <div class="bg-white border py-3 px-4 m-5" >
+                <div className="aboutKeyCaps">
+                    <h1>About KeyCaps</h1>
+                    <h3>KeyCapsとは</h3>
+                    <p>キーキャップの販売を専門としたショッピングサイトです。</p>
+                    <h3>そもそもキーキャップって？</h3>
+                    <p>コンピューターのキーボードのキースイッチを覆う小さなプラスチック製のカバーのことです。</p>
 
-            <h1>AboutKeyCaps</h1>
-            <h3>KeyCapsとは</h3>
-            <p>キーキャップの販売を専門としたショッピングサイトです。</p>
-            <h3>そもそもキーキャップって？</h3>
-            <p>コンピューターのキーボードのキースイッチを覆う小さなプラスチック製のカバーのことです。</p>
+                    <h3>なぜキーキャップの販売サイトにしたのか</h3>
+                    <p>サイト作成主がメカニカルキーボードや自作キーボードが好きだからです。</p>
 
-            <h2>このサイトを作成するにあたって</h2>
-            <h3>なぜキーキャップの販売サイトにしたのか</h3>
-            <p>サイト作成主がメカニカルキーボードや自作キーボードが好きだからです。</p>
+                    <h3>おすすめのキーボードは？</h3>
+                    <p>Keychron、Nuphyです。配色やキーキャップの質感が良く、見ているだけでも楽しいと思える、そんなキーボードです。</p>
 
+                    <h2>このサイトを作成するにあたって</h2>
 
-            <h3>おすすめのキーボードは？</h3>
-            <p>KeyChron、Nuphyです。配色やキートップの質感が良く、見ているだけでも楽しいと思える、そんなキーボードです。</p>
+                    <h3>参考にしたWebサイト</h3>
+                    <p >keychronJP - <a href="https://keychron.jp/">サイトはこちら</a></p>
 
+                    <h3>使用したJavascriptライブラリ</h3>
+                    <p>React.js</p>
 
-
-
-
-        </div>
+                    <h3>デザインのために授業外で導入したreactコンポーネント(ライブラリ)</h3>
+                    <ul>
+                        <li>Bootstrap - ver 5.2.3</li>
+                        <li>Material UI - ver 5.10.16</li>
+                        <li>React Alice Carousel - ver 6.4.4</li>
+                    </ul>
+                </div>
+            </div>
     );
 }
 
