@@ -1,8 +1,8 @@
 function AboutKeyCaps() {
     return (
-        <div class="bg-white border py-3 px-4 m-5" >
+        <div className="bg-white border py-3 px-4 m-5" >
             <div className="aboutKeyCaps">
-                <h1 class="fw-bold">About KeyCaps</h1>
+                <h1 className="fw-bold">About KeyCaps</h1>
                 <h3>KeyCapsとは</h3>
                 <p>キーキャップの販売を専門としたショッピングサイトです。</p>
                 <h3>そもそもキーキャップって？</h3>

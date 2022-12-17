@@ -9,10 +9,12 @@ function Home(props) {
       return (
         <div key={index}>
           <Link to={'/categorizedProducts/' + index}>
-            <img src={"images/categorizedProducts/" + s.img + ".jpg"} alt="s.img" class="col-md-12" />
+            <img src={"images/categorizedProducts/" + s.img + ".jpg"} alt="s.img" className="col-md-12" />
           </Link>
           <div className="products-box">
-            <p class="text-center" >{s.categoryName}</p>
+          <Link to={'/categorizedProducts/' + index}>
+            <p className="text-center d-block" >{s.categoryName}</p>
+          </Link>
           </div>
         </div>
       )
@@ -29,23 +31,23 @@ function Home(props) {
   return (
     <div className="fadein-home">
       <AliceCarousel autoPlay autoPlayInterval="3500" autoPlayStrategy='all' infinite keyboardNavigation >
-        <img src={"images/Home/Home1.jpg"} class="img-fluid" alt="Home0.jpg" />
-        <img src={"images/Home/Home2.jpg"} class="img-fluid" alt="Home2.jpg" />
-        <img src={"images/Home/Home3.jpg"} class="img-fluid" alt="Home3.jpg" />
-        <img src={"images/Home/Home4.jpg"} class="img-fluid" alt="Home1.jpg" />
-        <img src={"images/Home/Home5.jpg"} class="img-fluid" alt="Home1.jpg" />
-        <img src={"images/Home/Home6.jpg"} class="img-fluid" alt="Home1.jpg" />
+        <img src={"images/Home/Home1.jpg"} className="img-fluid" alt="Home0.jpg" />
+        <img src={"images/Home/Home2.jpg"} className="img-fluid" alt="Home2.jpg" />
+        <img src={"images/Home/Home3.jpg"} className="img-fluid" alt="Home3.jpg" />
+        <img src={"images/Home/Home4.jpg"} className="img-fluid" alt="Home1.jpg" />
+        <img src={"images/Home/Home5.jpg"} className="img-fluid" alt="Home1.jpg" />
+        <img src={"images/Home/Home6.jpg"} className="img-fluid" alt="Home1.jpg" />
       </AliceCarousel>
       <div className="category-box">
         <div className="category-box-tape" />
         <p className="category-box-title">Caps Category</p>
       </div>
-      <div class="container bg-white border pt-4" >
-        <div class="row row-cols-3">
+      <div className="container bg-white border pt-4" >
+        <div className="row row-cols-3">
           {list}
         </div>
       </div>
-      <p class="py-5" />
+      <p className="py-5" />
       <p id="page-top" >
         <a onClick={returnTop}>Page Top</a>
       </p>

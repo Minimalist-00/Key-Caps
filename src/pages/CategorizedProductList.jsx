@@ -13,10 +13,12 @@ function CategorizedProductList(props) {
       return (
         <div key={index}>
           <Link to={'/ProductsDetail/' + categoryId + "/" + index}>
-            <img src={"/images/products/" + item.img + "/" + product.capname + "_0.jpg"} alt="product.capname" class="col-md-12" />
+            <img src={"/images/products/" + item.img + "/" + product.capname + "_0.jpg"} alt="product.capname" className="col-md-12" />
           </Link>
           <div className="product-box">
-            <p class="text-center">{product.capname}キー</p>
+          <Link to={'/ProductsDetail/' + categoryId + "/" + index}>
+            <p className="text-center">{product.capname}キー</p>
+            </Link>
           </div>
         </div>
       )
@@ -34,22 +36,22 @@ function CategorizedProductList(props) {
     <div>
       <body>
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
+          <ol className="breadcrumb">
+            <li className="breadcrumb-item">
               <Link to={'/'} className="go-back-page" >
                 トップページ
               </Link>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">{item.categoryName}</li>
+            <li className="breadcrumb-item active" aria-current="page">{item.categoryName}</li>
           </ol>
         </nav>
-        <div class="container" >
+        <div className="container" >
           <h2 >{item.categoryName} キーキャップ一覧</h2>
-          <div class="row row-cols-4 bg-white border pt-4 px-3">
+          <div className="row row-cols-4 bg-white border pt-4 px-3">
             {productsList}
           </div>
         </div>
-        <p class="py-5" />
+        <p className="py-5" />
         <p id="page-top" >
           <a onClick={returnTop}>Page Top</a>
         </p>

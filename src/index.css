@@ -145,28 +145,42 @@ header h1 {
 
 .products-box {
   width: 65%;
-  padding: .5em 1em;
   margin: .8em auto 2.3em auto;
   border: solid 1.5px #444;
   background: rgba(206, 206, 206, 0.3);
 }
 
+.products-box:hover {
+  background: #DDD
+}
+
 .products-box p {
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
+}
+
+.products-box a {
+  text-decoration: none;
 }
 
 .product-box {
   width: 75%;
-  padding: .4em 0em;
   margin: .8em auto 2.1em auto;
   border: solid 1.5px #444;
   background: rgba(206, 206, 206, 0.3);
 }
 
+.product-box:hover {
+  background: #DDD
+}
+
 .product-box p {
   margin: 0;
-  padding: 0;
+  padding: 7px 0;
+}
+
+.product-box a {
+  text-decoration: none;
 }
 
 .category-box {
