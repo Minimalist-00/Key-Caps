@@ -6,8 +6,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-
-
 function Footer() {
     return (
         <div>
@@ -29,10 +27,10 @@ function Footer() {
                     <div class="box">
                         <h5>Follow us</h5>
                         <ul class="d-flex">
-                            <li class="pe-2 ps-1"><Link to={'/Facebook'} ><FacebookIcon/></Link></li>
-                            <li class="pe-2"><Link to={'/Twitter'} ><TwitterIcon/></Link></li>
-                            <li class="pe-2"><Link to={'/Line'} ><InstagramIcon/></Link></li>
-                            <li class="pe-2"><Link to={'/Youtube'} ><YouTubeIcon/></Link></li>
+                            <li class="pe-2 ps-1"><Link to={'/Facebook'} ><FacebookIcon /></Link></li>
+                            <li class="pe-2"><Link to={'/Twitter'} ><TwitterIcon /></Link></li>
+                            <li class="pe-2"><Link to={'/Line'} ><InstagramIcon /></Link></li>
+                            <li class="pe-2"><Link to={'/Youtube'} ><YouTubeIcon /></Link></li>
                         </ul>
                     </div>
                     <p class="copyright">

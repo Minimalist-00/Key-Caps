@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
+import Rating from '@mui/material/Rating';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
+import Alert from '@mui/material/Alert';
+
+/* 未完成のページです */
 
 function Review() {
 
@@ -21,29 +27,42 @@ function Review() {
         }
     }
 
+    const [value, setValue] = React.useState(0);  //星の数を変える
+
     const list = textList.map(
-        (text, i) => <p>{i+1} : {text}</p>
+        (text, i) => <p>{i + 1} : {text}</p>
     );
 
     return (
-        <div class="bg-white border p-3 m-5" >
-            <div class="row">
-                <h2 class="pb-2">KeyCapsへのレビューを書く</h2>
-                <div class="col-md-5">
-                    <div class="form-floating pb-3">
-                        <textarea class="form-control w-75" placeholder="Leave a comment here" style={{ height: 150 }} value={inputText} onChange={(e) => setInputText(e.target.value)} />
-                        {/* onChange={(e) => setInputText(e.target.value)} が、goods.jsのhandleChangeと同じことを表している。仮引数eとしてアロー関数で記述。これによりsetInputTextが常に更新される */}
-                        <label for="floatingTextarea">レビュー</label>
+        <div>
+            <Alert severity="warning" color="error">
+                こちらは未完成のページです
+            </Alert>
+            <Box sx={{ width: '100%' }}>
+                <LinearProgress />
+            </Box>
+            <div class="bg-white border p-3 m-5" >
+                <div class="row">
+                    <h2 class="pb-2">KeyCapsへのレビューを書く</h2>
+                    <Box sx={{ '& > legend': { mt: 2 }, }}>
+                        <Rating name="simple-controlled" value={value} onChange={(event, newValue) => { setValue(newValue); }} />
+                    </Box>
+                    <div class="col-md-5">
+                        <div class="form-floating pb-3">
+                            <textarea class="form-control w-75" placeholder="Leave a comment here" style={{ height: 150 }} value={inputText} onChange={(e) => setInputText(e.target.value)} />
+                            {/* onChange={(e) => setInputText(e.target.value)} が、goods.jsのhandleChangeと同じことを表している。仮引数eとしてアロー関数で記述。これによりsetInputTextが常に更新される */}
+                            <label for="floatingTextarea">レビュー</label>
+                        </div>
+                        <Button variant="outlined" endIcon={<SendIcon />} onClick={updateList}>投稿する</Button>
                     </div>
-                    <Button variant="outlined" endIcon={<SendIcon />} onClick={updateList}>投稿する</Button>
-                </div>
-                <div class="col-md-6 border rounded">
-                    <div className="print">
-                        <p class="my-2 mx-1">{list}</p>
+                    <div class="col-md-6 border rounded">
+                        <div className="print">
+                            <p class="my-2 mx-1">{list}</p>
+                        </div>
                     </div>
                 </div>
+                <p class="py-5" />
             </div>
-            <p class="py-5" />
         </div>
     );
 }

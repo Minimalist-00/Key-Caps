@@ -1,1 +1,2 @@
-categorizedProducts
+
+        { capname: "C", price: 80 },

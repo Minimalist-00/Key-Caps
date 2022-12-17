@@ -1,11 +1,10 @@
 /* cssは全てここに記述 */
 
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   animation: bgChange 8s ease infinite;
@@ -15,11 +14,36 @@ body {
 body p {
   margin: 0;
   padding: 0;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body li {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body h1 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body h2 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body h3 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body h4 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body h5 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 body a {
-  /* text-decoration: none; */
   color: #000;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 body a:hover {
@@ -27,8 +51,13 @@ body a:hover {
   text-decoration: none;
 }
 
+footer {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
 
-
+.font {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
 
 .fadein-home {
   /* フェードイン･アウトのアニメーションを追加 */
@@ -39,10 +68,6 @@ body a:hover {
   animation: fadein-anim 5s forwards;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 /* ヘッダーに関わるcss */
 header {
@@ -119,7 +144,7 @@ header h1 {
 /* Homeに関わるcss */
 
 .products-box {
-  width: 40%;
+  width: 65%;
   padding: .5em 1em;
   margin: .8em auto 2.3em auto;
   border: solid 1.5px #444;
@@ -132,7 +157,7 @@ header h1 {
 }
 
 .product-box {
-  width: 50%;
+  width: 75%;
   padding: .4em 0em;
   margin: .8em auto 2.1em auto;
   border: solid 1.5px #444;
@@ -285,32 +310,32 @@ header h1 {
 }
 
 /* Loginページに関わるcss */
-.bigSpace{
+.bigSpace {
   margin-bottom: 50%;
 }
 
 /* AboutKeyCapsに関わるcss */
 
 
-.aboutKeyCaps h1{
+.aboutKeyCaps h1 {
   font-size: 220%;
   padding: 0 0 10px 0;
   margin: 0;
 }
 
-.aboutKeyCaps h2{
+.aboutKeyCaps h2 {
   font-size: 200%;
   padding: 50px 0 10px 0;
   margin: 0;
 }
 
-.aboutKeyCaps h3{
+.aboutKeyCaps h3 {
   font-size: 130%;
-  padding:20px 0px 5px 10px;
+  padding: 20px 0px 5px 10px;
   margin: 0;
 }
 
-.aboutKeyCaps p{
+.aboutKeyCaps p {
   font-size: 110%;
   padding-left: 20px;
 }

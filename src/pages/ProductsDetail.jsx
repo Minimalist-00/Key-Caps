@@ -86,10 +86,10 @@ function ProductsDetail(props) {
                             </div>
                             {/* 商品情報のボックス */}
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-sm-6">
                                     <p class="pb-3">価格：¥{product.price} (tax in)</p>
                                     <select value={amount} onChange={e => setAmount(e.currentTarget.value)} class="custom-select" className="select-amount">
-                                        <option value={0}>個数を選択</option>
+                                        <option value={0} className="font">個数を選択</option>
                                         <option value={1}>1</option>
                                         <option value={2}>2</option>
                                         <option value={3}>3</option>
@@ -98,7 +98,7 @@ function ProductsDetail(props) {
                                     </select>
                                     <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-sm-6">
                                     <div class="pb-3">合計金額：¥{amount * product.price} (tax in)</div>
                                     {submitButton}
                                 </div>

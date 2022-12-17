@@ -5,9 +5,15 @@ import Alert from '@mui/material/Alert';
 
 function ThanksPurchase() {
 
+    const returnTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
+
     return (
         <div>
-            {/* <Link to='/'>買い物を続ける</Link> */}
             <div>
                 <Alert severity="success" color="info" >
                     購入が正常に完了しました！ - <Link to="/Review" class="ms-1">よければ感想をお聞かせください</Link>

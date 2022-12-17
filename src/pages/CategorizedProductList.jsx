@@ -16,7 +16,7 @@ function CategorizedProductList(props) {
             <img src={"/images/products/" + item.img + "/" + product.capname + "_0.jpg"} alt="product.capname" class="col-md-12" />
           </Link>
           <div className="product-box">
-          <p class="text-center">{product.capname}キー</p>
+            <p class="text-center">{product.capname}キー</p>
           </div>
         </div>
       )
@@ -44,7 +44,7 @@ function CategorizedProductList(props) {
           </ol>
         </nav>
         <div class="container" >
-        <h2 >{item.categoryName} キーキャップ一覧</h2>
+          <h2 >{item.categoryName} キーキャップ一覧</h2>
           <div class="row row-cols-4 bg-white border pt-4 px-3">
             {productsList}
           </div>

@@ -13,9 +13,14 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+import LinearProgress from '@mui/material/LinearProgress';
 import Alert from '@mui/material/Alert';
 
-const theme = createTheme();
+const theme = createTheme({
+    typography: {
+        "fontFamily": "\"M PLUS Rounded 1c\", \"sans-serif\"",
+    },
+});
 
 export default function SignIn() {
     const handleSubmit = (event) => {
@@ -32,6 +37,9 @@ export default function SignIn() {
             <Alert severity="warning" color="error">
                 こちらは未完成のページです
             </Alert>
+            <Box sx={{ width: '100%' }}>
+                <LinearProgress />
+            </Box>
             <Container maxWidth="sm">
                 <CssBaseline />
                 <Box

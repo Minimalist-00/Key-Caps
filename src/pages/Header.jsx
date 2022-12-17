@@ -31,9 +31,9 @@ function Header() {
                 <Outlet />
                 {/* ここにルーター内のリンクに対応した各ページを表示させる */}
             </body>
-            <div>
+            <footer>
                 <Footer />
-            </div>
+            </footer>
         </div>
     );
 }
