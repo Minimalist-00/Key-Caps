@@ -32,8 +32,7 @@ export default function App() {    //関数宣言
       <ScrollTop />
       <Routes>
         <Route path="/" element={<Header />}>
-          <Route path="/" element={<Home categorizedProducts={Category} />}>
-          </Route>
+          <Route path="/" element={<Home categorizedProducts={Category} />} />
           <Route path="/categorizedProducts/:categoryId" element={<CategorizedProductList categorizedProducts={Category} />} />
           <Route path="/ProductsDetail/:categoryId/:productsId" element={<ProductsDetail categorizedProducts={Category} />} />
           <Route path="/thanksPurchase" element={<ThanksPurchase categorizedProducts={Category} />} />
