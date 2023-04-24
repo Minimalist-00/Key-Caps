@@ -7,7 +7,6 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchIcon from '@mui/icons-material/Search';
 
 
-
 const returnTop = () => {
     window.scrollTo({
         top: 0,
